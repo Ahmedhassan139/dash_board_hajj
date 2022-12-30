@@ -1,0 +1,81 @@
+
+
+
+
+/* cards */
+div[class="css-1r6slb0 e1tzin5v2"] {
+    background-color: white;
+    border-radius: 10px;
+    padding: 8px 8px 8px 8px;
+    margin: 2px 2px 2px 2px;
+    box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+    height: 110px;
+
+  }
+
+
+
+/* charts */
+  
+
+  div[    class="user-select-none svg-container"  ] {
+    background-color: #876f27;
+
+    margin: 5px 5px 5px 5px;
+    white-space: normal;
+    margin-right: 10px;
+    border-radius: 10px;
+
+
+   
+   
+   
+   
+    box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+
+  } 
+
+  div[  class="stPlotlyChart js-plotly-plot" ] {
+    background-color: #876f27;
+    width: 450px;
+    margin-right: 10px;
+    border-radius: 10px;
+
+    white-space: normal;
+
+   
+   
+   
+   
+    box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+
+  } 
+
+
+/* body */
+
+  div[ class="block-container css-18e3th9 egzxvld2" ] {
+    background-color: rgb(226, 222, 222);
+    
+
+  }
+
+   /* logo haj */
+
+
+
+   div[    class="css-1kyxreq etr89bj2"] {
+    
+    display: block;
+
+    
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    
+    align-content: center;
+
+
+  }
