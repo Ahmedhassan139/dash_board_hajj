@@ -210,41 +210,44 @@ with reports1:
 
                 url1 = 'https://drive.google.com/file/d/1F926hDpvx-6Js2anA_hznGeLc-7U4wmY/view?usp=sharing'
                 if st.button('رصد وزارة الحج والعمرة - 7 سبتبمر- 13 سبتمبر', ):
-                    webbrowser.open(url1)
+                    st.markdown(url1, unsafe_allow_html=True)
+
+               
                     
                     
-                    st.session_state.update(expanded = False)
+                    
+                   
+                   
                 url2 ='https://docs.google.com/presentation/d/1MRit3bsPbDe6YPseAUZUVWb1zLrz8f5DlsWQO3iTpWo/edit?usp=sharing'
                 if st.button('رصد وزارة الحج والعمرة - 14 سبتبمر- 20 سبتبمر' ):
-                    webbrowser.open(url2)
+                    st.markdown(url2, unsafe_allow_html=True)
                 
 
                 url3 ='https://docs.google.com/presentation/d/1UiLNQF_N4UL2VqOSmG6tshILPY-rrHmTytIBdt4emNs/edit?usp=sharing'
                 if st.button('رصد وزارة الحج والعمرة - 21 سبتبمر- 27 سبتبمر' ):
-                    webbrowser.open(url3)
+                    st.markdown(url3, unsafe_allow_html=True)
         
         
 
                 url4 ='https://docs.google.com/presentation/d/1pSZ73vLGYjJIZfd50FeHTaVq2sVuIRAMVHmHNpWUrNg/edit?usp=sharing'
                 if st.button('رصد وزارة الحج والعمرة - 28 سبتبمر- 7 أكتوبر ' ):
-                    webbrowser.open(url4)
+                    st.markdown(url4, unsafe_allow_html=True)
 reports2 =st.expander('تفارير التفاعل من 8 أكتوبر - 4 نوفمبر')
 with reports2:
     url5 ='https://docs.google.com/presentation/d/1fgpkL4nog4h53bqnrHlFHtOiuLEPHz9Vt0RQJIIue-U/edit?usp=sharing'
     if st.button('رصد وزارة الحج والعمرة - 8 أكتوبر - 14 أكتوبر ' ):
-        webbrowser.open(url5)
+        st.markdown(url5, unsafe_allow_html=True)
 
     url6 ='https://docs.google.com/presentation/d/1sWrFXucMRPgqYoxaycRVkOBAF9y-Kkl-Gjr1Q9fsDwU/edit?usp=sharing'
     if st.button('رصد وزارة الحج والعمرة - 15 اكتوبر -  21 أكتوبر' ):
-        webbrowser.open(url6)
+        st.markdown(url6, unsafe_allow_html=True)
     url7 ='https://docs.google.com/presentation/d/1sWrFXucMRPgqYoxaycRVkOBAF9y-Kkl-Gjr1Q9fsDwU/edit?usp=sharing'
     if st.button('رصد وزارة الحج والعمرة - 22 اكتوبر -  28 أكتوبر' ):
-        webbrowser.open(url7)
+        st.markdown(url7, unsafe_allow_html=True)
 
     url8 ='https://docs.google.com/presentation/d/1ATxxi8GwKUMqDiBFgMcIqbhYG-JbelP1EQDuC0643ow/edit?usp=share_link'
     if st.button('رصد وزارة الحج 29 أكتوبر - 4 نوفمبر' ):
-        webbrowser.open(url8)
-
+        st.markdown(url8, unsafe_allow_html=True)
 
 hide_st_style = """
             <style>
