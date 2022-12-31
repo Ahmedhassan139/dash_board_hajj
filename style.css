@@ -4,7 +4,7 @@
 
 /* cards */
 div[class="css-1r6slb0 e1tzin5v2"] {
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 10px;
     padding: 8px 8px 8px 8px;
     margin: 2px 2px 2px 2px;
@@ -19,7 +19,7 @@ div[class="css-1r6slb0 e1tzin5v2"] {
   
 
   div[    class="user-select-none svg-container"  ] {
-    background-color: #876f27;
+    background-color: whitesmoke;
 
     margin: 5px 5px 5px 5px;
     white-space: normal;
@@ -36,7 +36,7 @@ div[class="css-1r6slb0 e1tzin5v2"] {
   } 
 
   div[  class="stPlotlyChart js-plotly-plot" ] {
-    background-color: #876f27;
+    background-color: whitesmoke;
     width: 450px;
     margin-right: 10px;
     border-radius: 10px;
@@ -77,5 +77,25 @@ div[class="css-1r6slb0 e1tzin5v2"] {
     
     align-content: center;
 
+
+
+  }
+
+
+  /* reports expander */
+
+  div [ class="css-1fcdlhc e1s6o5jp0"]{
+    background-color: whitesmoke;
+    margin: 2px 2px 2px 2px;
+    box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+    border-radius: 10px;
+  }
+
+
+  /* pages */
+
+  div [class="css-j7qwjs e1fqkh3o5"]{
+    background-color: white;
+    box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
 
   }
