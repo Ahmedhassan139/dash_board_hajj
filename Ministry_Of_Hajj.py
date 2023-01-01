@@ -181,9 +181,10 @@ with col5:
 
     
           
-        fig_countries = px.pie(df_countries, width=550, color = 'الدولة',values=df_countries['extra_article_attributes.world_data.country'], names=df_countries['الدولة'],  title="الدول", labels={
+        fig_countries = px.pie(df_countries, width = 600,color = 'الدولة',values=df_countries['extra_article_attributes.world_data.country'], names=df_countries['الدولة'],  title="الدول", labels={
                                'extra_article_attributes.world_data.country': 'المشاركات'})
-        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, )
+        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, margin=dict(l=50, r=50, t=50, b=50),)
+       
         st.plotly_chart(fig_countries,)
     except:
         st.write('حمل البينات أولا')
