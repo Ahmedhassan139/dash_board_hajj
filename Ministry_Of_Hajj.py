@@ -161,9 +161,9 @@ with col4:
     
         fig_sentiment = px.pie( values= perecent_sent, names=names,color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
             title="نبرة التفاعل",)
-        fig_sentiment.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)",  "paper_bgcolor": "rgba(0, 0, 0, 0)"}, width =400)
+        fig_sentiment.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)",  "paper_bgcolor": "rgba(0, 0, 0, 0)"},)
 
-        graph = st.plotly_chart(fig_sentiment)
+        graph = st.plotly_chart(fig_sentiment, use_container_width = True)
     except:
         st.write('حمل البينات أولا')
 
@@ -183,9 +183,9 @@ with col5:
           
         fig_countries = px.pie(df_countries, color = 'الدولة',values=df_countries['extra_article_attributes.world_data.country'], names=df_countries['الدولة'],  title="الدول", labels={
                                'extra_article_attributes.world_data.country': 'المشاركات'})
-        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, margin=dict(l=50, r=50, t=50, b=50), width= 600)
+        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, margin=dict(l=50, r=50, t=50, b=50), )
        
-        st.plotly_chart(fig_countries,)
+        st.plotly_chart(fig_countries,use_container_width = True)
     except:
         st.write('حمل البينات أولا')
 
