@@ -131,7 +131,7 @@ with col3:
         st.write('البيانات غير متاحة')
 
 
-col4, col5 = st.columns(2)
+col4, col5 = st.columns([1,1.4])
 
 
 with col4:
@@ -146,13 +146,16 @@ with col4:
         pos_percent = round((positive/all_sentiment) *100, 1)
         neg_percent = round((negative/all_sentiment) *100, 1)
         neut_percent = round((neutral/all_sentiment) *100, 1)
-        fig_sentiment = px.bar( width= 500, x=[pos_percent, neut_percent, neg_percent], y=['positive', 'neutral', 'negative'],color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
-            orientation='h', title="نبرة التفاعل", labels={'x': 'النسبة المئوية', 'y': ''}, text= ['{} %'.format(pos_percent), '{} %'.format(neut_percent), '{} %'.format(neg_percent)])
-        fig_sentiment.update_yaxes(autorange="reversed")
+        perecent_sent = [pos_percent, neut_percent, neg_percent]
+        names =['positive', 'neutral', 'negative']
+    
+        fig_sentiment = px.pie( width= 400,values= perecent_sent, names=names,color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
+            title="نبرة التفاعل",)
+        fig_sentiment.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)",  "paper_bgcolor": "rgba(0, 0, 0, 0)"})
 
         graph = st.plotly_chart(fig_sentiment)
     except:
-        st.write('البيانات غير متاحة')
+        st.write('حمل البينات أولا')
 
         
 
@@ -167,12 +170,14 @@ with col5:
 
 
     
-        fig_countries = px.bar(df_countries, width=600, color = 'الدولة',x=df_countries['extra_article_attributes.world_data.country'], y=df_countries['الدولة'], orientation='h', title="الدول", labels={
+        fig_countries = px.bar(df_countries, width=650, color = 'الدولة',x=df_countries['extra_article_attributes.world_data.country'], y=df_countries['الدولة'], orientation='h', title="الدول", labels={
                                'extra_article_attributes.world_data.country': 'المشاركات'})
-        st.plotly_chart(fig_countries, )
+        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, )
+        fig_countries.update_traces(width=1) 
+        st.plotly_chart(fig_countries,)
     except:
-        st.write('البيانات غير متاحة')
-
+        st.write('حمل البينات أولا')
+        
 bottom_container = st.container()
 col6, col7, col8  = st.columns(3)
 with bottom_container:
