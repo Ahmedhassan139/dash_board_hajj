@@ -19,11 +19,14 @@ div[class="css-1r6slb0 e1tzin5v2"] {
   
 
   div[    class="user-select-none svg-container"  ] {
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 
-    margin: 3px 3px 3px 3px;
+    margin: 1px 1px 3px 3px;
     white-space: normal;
     border-radius: 10px;
+    align-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
     
 
 
@@ -34,8 +37,6 @@ div[class="css-1r6slb0 e1tzin5v2"] {
     box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
 
   } 
-
-   
 
 
 /* body */
