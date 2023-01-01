@@ -21,10 +21,10 @@ div[class="css-1r6slb0 e1tzin5v2"] {
   div[    class="user-select-none svg-container"  ] {
     background-color: whitesmoke;
 
-    margin: 5px 5px 5px 5px;
+    margin: 3px 3px 3px 3px;
     white-space: normal;
-    margin-right: 10px;
     border-radius: 10px;
+    
 
 
    
@@ -35,27 +35,13 @@ div[class="css-1r6slb0 e1tzin5v2"] {
 
   } 
 
-  div[  class="stPlotlyChart js-plotly-plot" ] {
-    background-color: whitesmoke;
-    width: 450px;
-    margin-right: 10px;
-    border-radius: 10px;
-
-    white-space: normal;
-
    
-   
-   
-   
-    box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
-
-  } 
 
 
 /* body */
 
   div[ class="block-container css-18e3th9 egzxvld2" ] {
-    background-color: rgb(226, 222, 222);
+    background-color: rgba(224, 236, 245, 0.814);
     
 
   }
