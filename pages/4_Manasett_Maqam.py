@@ -172,7 +172,7 @@ with col5:
     
         fig_countries = px.bar(df_countries,  color = 'الدولة',x=df_countries['extra_article_attributes.world_data.country'], y=df_countries['الدولة'], orientation='h', title="الدول", labels={
                                'extra_article_attributes.world_data.country': 'المشاركات'})
-        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, )
+        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, margin =dict(l=20, r=20,t=20, b=20) )
         fig_countries.update_traces(width=1) 
         st.plotly_chart(fig_countries,use_container_width =True)
     except:
