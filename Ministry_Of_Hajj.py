@@ -11,9 +11,14 @@ import time
 
 st.set_page_config(page_title="منشورات وزاة الحج", page_icon=":bar_chart:",
                    layout="wide", initial_sidebar_state='collapsed')
+def write_date (dts):
+
+                    date = st.write('Start: ', dts[0], "End: ", dts[1])
+                    return date 
 col, col0 = st.columns(2)
 with col0:
-
+    
+    
     st.markdown("<h4 style='text-align: right; color: black; margin-top:40px;'>منشورات وزاة الحج</h4>",
                 unsafe_allow_html=True)
 
@@ -82,7 +87,8 @@ with st.sidebar:
                 dt(year=2022, month=12, day=29, hour=16, minute=30)),
                 key='#date_range',
                 help="The start and end date time")
-                st.write('Start: ', dts[0], "End: ", dts[1])
+                
+                date = write_date(dts)
             
             
                 df_dated = df[(df["indexed"] <=  '{}'.format(dts[1])) & (df['indexed'] >=  '{}'.format(dts[0]))] 
@@ -92,7 +98,8 @@ with st.sidebar:
             except:
                 st.write("You must pick a start and end date")
                 st.stop()
-            
+
+          
             
             
             
@@ -134,7 +141,7 @@ with col3:
         st.write('حمل البينات أولا')
 
 
-col4, col5 = st.columns(2)
+col4, col5 = st.columns([1,1.4])
 
 
 with col4:
@@ -149,9 +156,12 @@ with col4:
         pos_percent = round((positive/all_sentiment) *100, 1)
         neg_percent = round((negative/all_sentiment) *100, 1)
         neut_percent = round((neutral/all_sentiment) *100, 1)
-        fig_sentiment = px.bar( width= 500, x=[pos_percent, neut_percent, neg_percent], y=['positive', 'neutral', 'negative'],color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
-            orientation='h', title="نبرة التفاعل", labels={'x': 'النسبة المئوية', 'y': ''}, text= ['{} %'.format(pos_percent), '{} %'.format(neut_percent), '{} %'.format(neg_percent)])
-        fig_sentiment.update_yaxes(autorange="reversed")
+        perecent_sent = [pos_percent, neut_percent, neg_percent]
+        names =['positive', 'neutral', 'negative']
+    
+        fig_sentiment = px.pie( width= 400,values= perecent_sent, names=names,color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
+            title="نبرة التفاعل",)
+        fig_sentiment.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)",  "paper_bgcolor": "rgba(0, 0, 0, 0)"})
 
         graph = st.plotly_chart(fig_sentiment)
     except:
@@ -170,9 +180,11 @@ with col5:
 
 
     
-        fig_countries = px.bar(df_countries, width=600, color = 'الدولة',x=df_countries['extra_article_attributes.world_data.country'], y=df_countries['الدولة'], orientation='h', title="الدول", labels={
+        fig_countries = px.bar(df_countries, width=650, color = 'الدولة',x=df_countries['extra_article_attributes.world_data.country'], y=df_countries['الدولة'], orientation='h', title="الدول", labels={
                                'extra_article_attributes.world_data.country': 'المشاركات'})
-        st.plotly_chart(fig_countries, )
+        fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, )
+        fig_countries.update_traces(width=1) 
+        st.plotly_chart(fig_countries,)
     except:
         st.write('حمل البينات أولا')
 
@@ -250,6 +262,40 @@ with reports2:
     url8 ='https://docs.google.com/presentation/d/1ATxxi8GwKUMqDiBFgMcIqbhYG-JbelP1EQDuC0643ow/edit?usp=share_link'
     if st.button('رصد وزارة الحج 29 أكتوبر - 4 نوفمبر' ):
         st.markdown(url8, unsafe_allow_html=True)
+
+reports3 =st.expander('تفارير التفاعل من 5 نوفمبر - 2 ديسمبر')
+with reports3:
+    url9 ='https://docs.google.com/presentation/d/1-V3pVGmMhcmliZ2sG_mgoekS4f2SkzRRzu3oRe9LGzs/edit?usp=share_link'
+    if st.button('رصد وزارة الحج والعمرة 5 نوفمبر - 11 نوفمبر ' ):
+        st.markdown(url9, unsafe_allow_html=True)
+
+    url10 ='https://docs.google.com/presentation/d/1fXesKkF8NqnCwUTOC2iAqHnHfQZh9cWfF_e8VuoPvw4/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 12 نوفمبر - 18 نوفمبر' ):
+        st.markdown(url10, unsafe_allow_html=True)
+    url11 ='https://docs.google.com/presentation/d/1_iURDzUrsJ0FMeaGDlM_edpVTZooi6ori0w9rUwfIhk/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 19 نوفمبر - 25 نوفمبر' ):
+        st.markdown(url11, unsafe_allow_html=True)
+
+    url12 ='https://docs.google.com/presentation/d/11mcdWHj_xm3aLSaHd8rfdS2TQ-1w1kp68Lu8KJu4ky4/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 26 نوفمبر - 2 ديسمبر' ):
+        st.markdown(url12, unsafe_allow_html=True)
+
+reports4 =st.expander('تفارير التفاعل من 3 ديسمبر - 30 ديسمبر ')
+with reports4:
+    url13 ='https://docs.google.com/presentation/d/1bdJUx-wRnxqGiwt4AS0s-9qJ-rLpIV97fiUfFB7syto/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 3 ديسمبر- 9 ديسمبر' ):
+        st.markdown(url13, unsafe_allow_html=True)
+
+    url14 ='https://docs.google.com/presentation/d/1rTtfy0ZoVQUnnvO6btAdwV-25Ax2qCK44MayIkSDMCc/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 10  ديسمبر- 16 ديسمبر' ):
+        st.markdown(url14, unsafe_allow_html=True)
+    url15 ='https://docs.google.com/presentation/d/1AqBKp4V3dU8TTAtPOYPM-AYdJSjGoWEWY7GScIFVWNk/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 17  ديسمبر- 23 ديسمبر' ):
+        st.markdown(url15, unsafe_allow_html=True)
+
+    url16 ='https://docs.google.com/presentation/d/1q3eux1CxyyyqB0PNlPzXFX-DELclah0Fdc05_ETpRDs/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 24  ديسمبر-30  ديسمبر'):
+        st.markdown(url16, unsafe_allow_html=True)
     
             
 
