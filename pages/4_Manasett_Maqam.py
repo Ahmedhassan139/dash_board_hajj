@@ -247,6 +247,40 @@ with reports2:
     if st.button('رصد وزارة الحج 29 أكتوبر - 4 نوفمبر' ):
         st.markdown(url8, unsafe_allow_html=True)
 
+reports3 =st.expander('تفارير التفاعل من 5 نوفمبر - 2 ديسمبر')
+with reports3:
+    url9 ='https://docs.google.com/presentation/d/1-V3pVGmMhcmliZ2sG_mgoekS4f2SkzRRzu3oRe9LGzs/edit?usp=share_link'
+    if st.button('رصد وزارة الحج والعمرة 5 نوفمبر - 11 نوفمبر ' ):
+        st.markdown(url9, unsafe_allow_html=True)
+
+    url10 ='https://docs.google.com/presentation/d/1fXesKkF8NqnCwUTOC2iAqHnHfQZh9cWfF_e8VuoPvw4/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 12 نوفمبر - 18 نوفمبر' ):
+        st.markdown(url10, unsafe_allow_html=True)
+    url11 ='https://docs.google.com/presentation/d/1_iURDzUrsJ0FMeaGDlM_edpVTZooi6ori0w9rUwfIhk/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 19 نوفمبر - 25 نوفمبر' ):
+        st.markdown(url11, unsafe_allow_html=True)
+
+    url12 ='https://docs.google.com/presentation/d/11mcdWHj_xm3aLSaHd8rfdS2TQ-1w1kp68Lu8KJu4ky4/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 26 نوفمبر - 2 ديسمبر' ):
+        st.markdown(url12, unsafe_allow_html=True)
+
+reports4 =st.expander('تفارير التفاعل من 3 ديسمبر - 30 ديسمبر ')
+with reports4:
+    url13 ='https://docs.google.com/presentation/d/1bdJUx-wRnxqGiwt4AS0s-9qJ-rLpIV97fiUfFB7syto/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 3 ديسمبر- 9 ديسمبر' ):
+        st.markdown(url13, unsafe_allow_html=True)
+
+    url14 ='https://docs.google.com/presentation/d/1rTtfy0ZoVQUnnvO6btAdwV-25Ax2qCK44MayIkSDMCc/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 10  ديسمبر- 16 ديسمبر' ):
+        st.markdown(url14, unsafe_allow_html=True)
+    url15 ='https://docs.google.com/presentation/d/1AqBKp4V3dU8TTAtPOYPM-AYdJSjGoWEWY7GScIFVWNk/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 17  ديسمبر- 23 ديسمبر' ):
+        st.markdown(url15, unsafe_allow_html=True)
+
+    url16 ='https://docs.google.com/presentation/d/1q3eux1CxyyyqB0PNlPzXFX-DELclah0Fdc05_ETpRDs/edit?usp=share_link'
+    if st.button('رصد وزارة الحج 24  ديسمبر-30  ديسمبر'):
+        st.markdown(url16, unsafe_allow_html=True)
+
 
 
 
