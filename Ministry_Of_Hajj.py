@@ -159,7 +159,7 @@ with col4:
         perecent_sent = [pos_percent, neut_percent, neg_percent]
         names =['positive', 'neutral', 'negative']
     
-        fig_sentiment = px.pie( width= 400,values= perecent_sent, names=names,color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
+        fig_sentiment = px.pie( values= perecent_sent, names=names,color= ['positive', 'neutral', 'negative'] , color_discrete_map={'positive': '#186e06', 'neutral': '#f9e106', 'negative': '#e2060a'}, 
             title="نبرة التفاعل",)
         fig_sentiment.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)",  "paper_bgcolor": "rgba(0, 0, 0, 0)"})
 
@@ -181,7 +181,7 @@ with col5:
 
     
           
-        fig_countries = px.pie(df_countries, width = 600,color = 'الدولة',values=df_countries['extra_article_attributes.world_data.country'], names=df_countries['الدولة'],  title="الدول", labels={
+        fig_countries = px.pie(df_countries, color = 'الدولة',values=df_countries['extra_article_attributes.world_data.country'], names=df_countries['الدولة'],  title="الدول", labels={
                                'extra_article_attributes.world_data.country': 'المشاركات'})
         fig_countries.update_layout({"plot_bgcolor": "rgba(0, 0, 0, 0)" ,  "paper_bgcolor": "rgba(0, 0, 0, 0)", }, margin=dict(l=50, r=50, t=50, b=50),)
        
