@@ -572,10 +572,10 @@ with bottom_container:
  'فاطمة المالكي',
  ]
 
-            button_news = st.button('حمل التقرير')
+            
             with st.spinner(' جاري تحضير التقرير! انتطر من فضلك...'):
 
-                if button_news:
+                
                     newlist = pd.Series()
 
                     for key in key_words2:
@@ -605,10 +605,13 @@ with bottom_container:
                     news_paper_results2 = news_paper_results2.reset_index().drop(columns=['index'])
 
                     news_paper_results2 = news_paper_results2.to_csv().encode('utf-8')
-
+                    st.markdown("<h3 style='text-align: right; color: black;'>{}</h3>".format(len(news_paper_results1)),
+                    unsafe_allow_html=True)
                     st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=news_paper_results2, file_name='الصحف  {} - {}.csv'.format(dts[0], dts[1]),
                     mime='text/csv', )
                     st.success('Done!')
+
+                    
             
 
 
