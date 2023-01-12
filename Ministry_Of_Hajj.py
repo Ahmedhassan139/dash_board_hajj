@@ -601,7 +601,7 @@ with bottom_container:
                 
 
                     news_paper_results2 = news_paper_results1[['url', 'indexed' , 'title_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement']]
-                    news_paper_results2=news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'title_snippet' : 'الخير' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis='columns')
+                    news_paper_results2=news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'title_snippet' : 'الخبر' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis='columns')
                     news_paper_results2 = news_paper_results2.to_csv().encode('utf-8')
 
                     st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=news_paper_results2, file_name='الصحف  {} - {}.csv'.format(dts[0], dts[1]),
