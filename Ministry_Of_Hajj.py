@@ -600,8 +600,8 @@ with bottom_container:
                     unsafe_allow_html=True)
                 
 
-                    news_paper_results2 = news_paper_results1[['url', 'indexed' , 'title_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement']]
-                    news_paper_results2=news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'title_snippet' : 'الخبر' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis='columns')
+                    news_paper_results2 = news_paper_results1[['url', 'indexed' , 'content_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement']]
+                    news_paper_results2=news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'content_snippet' : 'الخبر' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis='columns')
                     news_paper_results2 = news_paper_results2.reset_index().drop(columns=['index'])
 
                     news_paper_results2 = news_paper_results2.to_csv().encode('utf-8')
