@@ -596,8 +596,6 @@ with bottom_container:
                     news_paper_results = pd.merge(df_dated, news_paper, left_index=True, right_index=True)
 
                     news_paper_results1 = news_paper_results.sort_values(by= ['reach'], ascending=False)
-                    st.markdown("<h6 style='text-align: right; color: black;'>{}</h6>".format(len(news_paper_results)),
-                    unsafe_allow_html=True)
                 
 
                     news_paper_results2 = news_paper_results1[['url', 'indexed' , 'content_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement']]
