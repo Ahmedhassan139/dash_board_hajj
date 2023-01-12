@@ -217,7 +217,7 @@ with bottom_container:
             # except:
             #     st.write('حمل البينات أولا')
 
-            key_words2 = ['mhmd alshykh',
+         key_words2 = ['mhmd alshykh',
  'محمد الفايدي',
  'صلاح محمد',
  'cleverdes.com',
@@ -573,41 +573,41 @@ with bottom_container:
  'فاطمة المالكي',
  ]
 
-            button_news = st.button('حمل التقرير')
-            with st.spinner(' جاري تحضير التقرير! انتطر من فضلك...'):
+          button_news = st.button('حمل التقرير')
+          with st.spinner(' جاري تحضير التقرير! انتطر من فضلك...'):
 
-                if button_news:
-                    newlist = pd.Series()
+              if button_news:
+                  newlist = pd.Series()
 
-                    for key in key_words2:
-                            news = df_dated['extra_author_attributes.name'].str.contains(key) 
+                  for key in key_words2:
+                          news = df_dated['extra_author_attributes.name'].str.contains(key) 
 
-                            
-                            newlist = newlist.append(news)
-                        
-                        
 
-                    newestlist  = newlist.to_frame()
-                    news_paper = newestlist[newestlist[0] == True]
+                          newlist = newlist.append(news)
 
-                    news_paper  = news_paper.sort_index()
 
-                    
 
-                    news_paper_results = pd.merge(df_dated, news_paper, left_index=True, right_index=True)
+                  newestlist  = newlist.to_frame()
+                  news_paper = newestlist[newestlist[0] == True]
 
-                    news_paper_results1 = news_paper_results.sort_values(by= ['reach'], ascending=False)
-                    st.markdown("<h6 style='text-align: right; color: black;'>{}</h6>".format(len(news_paper_results)),
-                    unsafe_allow_html=True)
-                
+                  news_paper  = news_paper.sort_index()
 
-                    news_paper_results2 = news_paper_results1[['url', 'indexed' , 'title_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement']]
-                    news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'title_snippet' : 'الخير' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'})
-                    news_paper_results2 = news_paper_results2.to_csv().encode('utf-8')
 
-                    st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=news_paper_results2, file_name='الصحف  {} - {}.csv'.format(dts[0], dts[1]),
-                    mime='text/csv', )
-                    st.success('Done!')
+
+                  news_paper_results = pd.merge(df_dated, news_paper, left_index=True, right_index=True)
+
+                  news_paper_results1 = news_paper_results.sort_values(by= ['reach'], ascending=False)
+                  st.markdown("<h6 style='text-align: right; color: black;'>{}</h6>".format(len(news_paper_results)),
+                  unsafe_allow_html=True)
+
+
+                  news_paper_results2 = news_paper_results1[['url', 'indexed' , 'title_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement']]
+                  news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'title_snippet' : 'الخير' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'})
+                  news_paper_results2 = news_paper_results2.to_csv().encode('utf-8')
+
+                  st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=news_paper_results2, file_name='الصحف  {} - {}.csv'.format(dts[0], dts[1]),
+                  mime='text/csv', )
+                  st.success('Done!')
             
 
 
