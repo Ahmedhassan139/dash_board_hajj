@@ -4,14 +4,40 @@
 
 /* cards */
 div[class="css-1r6slb0 e1tzin5v2"] {
+    
     background-color: whitesmoke;
     border-radius: 10px;
     padding: 8px 8px 8px 8px;
     margin: 2px 2px 2px 2px;
     box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+    display: flex;
+    align-items: stretch;
+
+    
     
 
   }
+/* cards rasd */
+div[class="css-12w0qpk e1tzin5v2"] {
+  background-color: whitesmoke; 
+  border-radius: 10px;
+  padding: 8px 8px 8px 8px;
+  margin: 2px 2px 2px 2px;
+  box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+  display: flex;
+  align-items: stretch;
+}
+  
+
+ button[class="css-1cpxqw2 edgvbvh9"] {
+  background-color: whitesmoke;
+  align-items: center;
+  box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
+  
+
+  
+
+ }
 
 
 
@@ -37,6 +63,8 @@ div[class="css-1r6slb0 e1tzin5v2"] {
     box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
 
   } 
+
+   
 
 
 /* body */
@@ -86,3 +114,12 @@ div[class="css-1r6slb0 e1tzin5v2"] {
     box-shadow: 5px 5px 10px 1px rgb(150, 148, 148);
 
   }
+
+
+  /* fonts */
+
+  @font-face {
+    font-family: "Tajawal";
+    src: url("/Users/macbook/Desktop/final_hajj/Tajawal");
+  
+    }
