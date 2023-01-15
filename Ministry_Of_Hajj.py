@@ -718,7 +718,7 @@ with bottom_container:
             famous_df_final = social_media_df_dated[['url', 'indexed' , 'content_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement',]]
             famous_df_final = famous_df_final.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'content_snippet' : 'الخير' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis= 'columns')
             famous_df_final = famous_df_final.reset_index().drop(columns=['index'])
-            famous_df_final1 = famous_df_final.to_csv().encode('utf-8')
+            famous_df_final1 = famous_df_final.to_csv().encode('utf-8-sig')
             st.markdown("<h3 style='text-align: center; color: black;'>{}</h3>".format(len(famous_df_final.index)),
             unsafe_allow_html=True)
             st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=famous_df_final1, file_name='المشاهير  {} - {}.csv'.format(dts[0], dts[1]),
@@ -737,7 +737,7 @@ with bottom_container:
             news_paper_results2 = df_newspapers_dated[['url', 'indexed' , 'content_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement',]]
             news_paper_results2 = news_paper_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'content_snippet' : 'الخير' , 'extra_source_attributes.name' : 'اسم الجريدة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis= 'columns')
             news_paper_results2 = news_paper_results2.reset_index().drop(columns=['index'])
-            news_paper_results3 = news_paper_results2.to_csv().encode('utf-8')
+            news_paper_results3 = news_paper_results2.to_csv().encode('utf-8-sig')
             st.markdown("<h3 style='text-align: center; color: black;'>{}</h3>".format(len(news_paper_results2.index)),
             unsafe_allow_html=True)
             st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=news_paper_results3, file_name='الصحف  {} - {}.csv'.format(dts[0], dts[1]),
@@ -755,7 +755,7 @@ with bottom_container:
         gov_results2 = df_gov_dated[['url', 'indexed' , 'content_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement',]]
         gov_results2 = gov_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'content_snippet' : 'الخبر' , 'extra_source_attributes.name' : 'اسم الحساب' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis= 'columns')
         gov_results2 = gov_results2.reset_index().drop(columns=['index'])
-        gov_results3 = gov_results2.to_csv().encode('utf-8')
+        gov_results3 = gov_results2.to_csv().encode('utf-8-sig')
         st.markdown("<h3 style='text-align: center; color: black;'>{}</h3>".format(len(gov_results2.index)),
         unsafe_allow_html=True)
         st.download_button(label= '  {}-{} اضغط لتحميل التقرير   '.format(dts[0], dts[1]), data=gov_results3, file_name='الجهات الحكومية  {} - {}.csv'.format(dts[0], dts[1]),
@@ -768,7 +768,7 @@ with bottom_container:
         channels_results2 = df_channels_dated[['url', 'indexed' , 'content_snippet', 'extra_source_attributes.name', 'extra_author_attributes.world_data.country' , 'reach' , 'engagement',]]
         channels_results2 = channels_results2.rename({'url': 'الرابط' , 'indexed' : 'التاريخ', 'content_snippet' : 'الخبر' , 'extra_source_attributes.name' : 'اسم القناة' , 'extra_author_attributes.world_data.country' : 'البلد' , 'reach' : 'معدل الوصول' , 'engagement' :'التفاعل'}, axis= 'columns')
         channels_results2 = channels_results2.reset_index().drop(columns=['index'])
-        channels_results3 = channels_results2.to_csv().encode('utf-8')
+        channels_results3 = channels_results2.to_csv().encode('utf-8-sig')
         st.markdown("<h3 style='text-align: center; color: black;'>{}</h3>".format(len(channels_results2.index)),
         unsafe_allow_html=True)
         
