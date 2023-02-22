@@ -582,7 +582,7 @@ with st.sidebar:
 
 
             try:
-                dts = st.date_input(label='Date Range: ', value=(dt(year=2022, month=12, day=29, hour=16, minute=30), 
+                dts = st.date_input(label='Date Range: ', value=(dt(year=2022, month=9, day=10, hour=16, minute=30), 
                 dt(year=2023, month=2, day=21, hour=16, minute=30)),
                 key='#date_range',
                 help="The start and end date time")
