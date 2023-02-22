@@ -125,7 +125,7 @@ with col2:
 with col3:
     st.markdown("<h6 style='text-align: right; color: black;'>معدل التفاعل</h6>", unsafe_allow_html=True)
     try:
-        engagement = df_dated['engagement'].sum()
+        engagement = round(df_dated['engagement'].sum())
         st.markdown("<h4 style='text-align: right; color: black;'>{}</h4>".format(engagement), unsafe_allow_html=True)
     except:
         st.write('حمل البينات أولا')
