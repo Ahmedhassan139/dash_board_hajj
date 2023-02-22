@@ -24,13 +24,13 @@ with col:
     st.image('haj_logo.png', caption='وزارة الحج')
 
 
-sheet_url3 ="https://docs.google.com/spreadsheets/d/1Q1CiTQleRVunDGLuwDW0pMhGBDZ0jxTZJUaPiyq3CG4/edit#gid=1595164542"
-url_manshorat = sheet_url3.replace('/edit#gid=' , '/export?format=csv&gid=')
+sheet_urlstar ="https://docs.google.com/spreadsheets/d/1Q1CiTQleRVunDGLuwDW0pMhGBDZ0jxTZJUaPiyq3CG4/edit#gid=1595164542"
+url_manshorat = sheet_urlstar.replace('/edit#gid=' , '/export?format=csv&gid=')
 
 
 
-sheet_url4 ="https://docs.google.com/spreadsheets/d/193J0WI0iCyx_WwVgaSkDrKYw9xJlLKAZyRUv1-UXFeU/edit#gid=5850792"
-url_manshorat_sent = sheet_url4.replace('/edit#gid=' , '/export?format=csv&gid=')
+sheet_urlstars ="https://docs.google.com/spreadsheets/d/193J0WI0iCyx_WwVgaSkDrKYw9xJlLKAZyRUv1-UXFeU/edit#gid=5850792"
+url_manshorat_sent = sheet_urlstars.replace('/edit#gid=' , '/export?format=csv&gid=')
 
 
 
