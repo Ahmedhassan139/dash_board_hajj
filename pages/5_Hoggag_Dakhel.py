@@ -24,12 +24,12 @@ with col:
 
 
 sheet_url ="https://docs.google.com/spreadsheets/d/1Q1CiTQleRVunDGLuwDW0pMhGBDZ0jxTZJUaPiyq3CG4/edit#gid=1595164542"
-url_manshorat = sheet_url.replace('/edit#gid=' , '/export?format=csv&gid=')
+url_manshorat_dakhel = sheet_url.replace('/edit#gid=' , '/export?format=csv&gid=')
 
 
 
 sheet_url2 ="https://docs.google.com/spreadsheets/d/193J0WI0iCyx_WwVgaSkDrKYw9xJlLKAZyRUv1-UXFeU/edit#gid=5850792"
-url_manshorat_sent = sheet_url2.replace('/edit#gid=' , '/export?format=csv&gid=')
+url_dakhel_sent = sheet_url2.replace('/edit#gid=' , '/export?format=csv&gid=')
 
 
 
@@ -41,8 +41,8 @@ local_css("style.css")
 
 @st.cache(allow_output_mutation=True)
 def get_data():
-    dataframe = pd.read_csv(url_manshorat)
-    dataframe2 = pd.read_csv(url_manshorat_sent)
+    dataframe = pd.read_csv(url_manshorat_dakhel)
+    dataframe2 = pd.read_csv(url_dakhel_sent)
     # time.sleep(4)
     return dataframe , dataframe2
 df, df_sentiment = get_data()
