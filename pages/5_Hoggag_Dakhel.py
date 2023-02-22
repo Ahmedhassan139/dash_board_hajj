@@ -18,22 +18,18 @@ with col0:
     
     st.markdown("<h4 style='text-align: right; color: black; margin-top:40px; font-family: 'Tajawal';'> حجاج الداخل </h4>",
                 unsafe_allow_html=True)
-    
 
 with col:
     st.image('haj_logo.png', caption='وزارة الحج')
 
 
-sheet_url3 ="https://docs.google.com/spreadsheets/d/1Q1CiTQleRVunDGLuwDW0pMhGBDZ0jxTZJUaPiyq3CG4/edit#gid=1595164542"
-url_manshorat = sheet_url3.replace('/edit#gid=' , '/export?format=csv&gid=')
+sheet_url ="https://docs.google.com/spreadsheets/d/1Q1CiTQleRVunDGLuwDW0pMhGBDZ0jxTZJUaPiyq3CG4/edit#gid=1595164542"
+url_manshorat = sheet_url.replace('/edit#gid=' , '/export?format=csv&gid=')
 
 
 
-sheet_url4 ="https://docs.google.com/spreadsheets/d/193J0WI0iCyx_WwVgaSkDrKYw9xJlLKAZyRUv1-UXFeU/edit#gid=5850792"
-url_manshorat_sent = sheet_url4.replace('/edit#gid=' , '/export?format=csv&gid=')
-
-
-
+sheet_url2 ="https://docs.google.com/spreadsheets/d/193J0WI0iCyx_WwVgaSkDrKYw9xJlLKAZyRUv1-UXFeU/edit#gid=5850792"
+url_manshorat_sent = sheet_url2.replace('/edit#gid=' , '/export?format=csv&gid=')
 
 
 
@@ -582,7 +578,7 @@ with st.sidebar:
 
 
             try:
-                dts = st.date_input(label='Date Range: ', value=(dt(year=2022, month=12, day=29, hour=16, minute=30), 
+                dts = st.date_input(label='Date Range: ', value=(dt(year=2022, month=9, day=10, hour=16, minute=30), 
                 dt(year=2023, month=2, day=21, hour=16, minute=30)),
                 key='#date_range',
                 help="The start and end date time")
