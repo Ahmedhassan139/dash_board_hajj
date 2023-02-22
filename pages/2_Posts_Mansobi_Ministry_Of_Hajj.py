@@ -16,7 +16,7 @@ col, col0 = st.columns(2)
 with col0:
     
     
-    st.markdown("<h4 style='text-align: right; color: black; margin-top:40px; font-family: 'Tajawal';'>منشورات وزاة الحج</h4>",
+    st.markdown("<h4 style='text-align: right; color: black; margin-top:40px; font-family: 'Tajawal';'>منشورات منسوبي وزاة الحج</h4>",
                 unsafe_allow_html=True)
 
 with col:
